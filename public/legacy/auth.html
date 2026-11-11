@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login & Register — GreenBasket</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <main class="auth-page">
+        <div class="auth-card">
+            <a href="index.html" class="wordmark auth-wordmark"><span class="mark">🧺</span> GreenBasket</a>
+            <div class="auth-tabs">
+                <button class="active" id="login-tab" type="button">Login</button>
+                <button id="register-tab" type="button">Register</button>
+            </div>
+            <form id="auth-form">
+                <div class="auth-brand"><b id="auth-title">Welcome back</b><span id="auth-sub">Login to your customer dashboard</span></div>
+                <label class="hidden" id="name-wrap">Full name<input id="auth-name" placeholder="Your name"></label>
+                <label id="role-wrap">Login as
+                    <select id="auth-role" required>
+                        <option value="user" selected>User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </label>
+                <label>Email<input id="auth-email" placeholder="you@example.com" required type="email"></label>
+                <label>Mobile<input id="auth-phone" placeholder="10-digit mobile"></label>
+                <label>Password<input id="auth-password" placeholder="Minimum 6 characters" required type="password"></label>
+                <button class="btn btn-primary btn-block" id="auth-submit" type="submit">Login</button>
+                <p class="demo-note">Admin access: <b>admin@greenbasket.in</b> / <b>admin123</b></p>
+            </form>
+        </div>
+    </main>
+    <script src="js/auth.js"></script>
+</body>
+</html>

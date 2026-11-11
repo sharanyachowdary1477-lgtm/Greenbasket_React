@@ -1,0 +1,6 @@
+GreenBasket image fixes
+
+- Product images now use working Unsplash image URLs for the previously broken Brinjal, Red Chilli Powder, and Garam Masala cards.
+- Recipe cards now use real food photography instead of using the recipe emoji as the main visual.
+- Image fallback handling is included: if a remote image fails, a working GreenBasket food image is shown instead.
+- The recipe icon remains as a small visual badge over the photograph.

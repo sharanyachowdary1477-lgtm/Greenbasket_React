@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   My Profile &mdash; GreenBasket
+  </title>
+  <link href="css/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div id="site-header">
+  </div>
+  <main class="section">
+   <div class="container profile-layout">
+    <aside class="profile-side">
+     <div class="avatar">
+      👤
+     </div>
+     <h2 id="side-name">
+      My Account
+     </h2>
+     <p id="side-email">
+     </p>
+     <button class="btn btn-ghost btn-block" id="logout">
+      Log out
+     </button>
+    </aside>
+    <section class="profile-main">
+     <div class="section-head">
+      <div>
+       <h1>
+        Profile &amp; delivery
+       </h1>
+       <p>
+        Manage your details, address and preferred payment method.
+       </p>
+      </div>
+     </div>
+     <form class="profile-card" id="profile-form">
+      <div class="form-grid">
+       <label>
+        Full name
+        <input id="p-name"/>
+       </label>
+       <label>
+        Mobile
+        <input id="p-phone"/>
+       </label>
+       <label>
+        Email
+        <input disabled="" id="p-email"/>
+       </label>
+       <label>
+        Preferred payment
+        <select id="p-payment">
+         <option>
+          UPI
+         </option>
+         <option>
+          CARD
+         </option>
+         <option>
+          CASH
+         </option>
+        </select>
+       </label>
+       <label class="wide">
+        Delivery address
+        <input id="p-line" placeholder="House no, street, area"/>
+       </label>
+       <label>
+        City
+        <input id="p-city" placeholder="Markapur"/>
+       </label>
+       <label>
+        State
+        <input id="p-state" value="Andhra Pradesh"/>
+       </label>
+       <label>
+        PIN code
+        <input id="p-pin" placeholder="6 digits"/>
+       </label>
+      </div>
+      <button class="btn btn-primary">
+       Save profile
+      </button>
+     </form>
+     <div class="profile-card">
+      <h2>
+       Recent orders
+      </h2>
+      <div id="orders">
+      </div>
+     </div>
+    </section>
+   </div>
+  </main>
+  <div id="site-footer">
+  </div>
+  <div id="cart-drawer-root">
+  </div>
+  <div id="carrot-root">
+  </div>
+  <script src="js/data.js">
+  </script>
+  <script src="js/chrome.js">
+  </script>
+  <script src="js/cart.js">
+  </script>
+  <script src="js/basil.js">
+  </script>
+  <script src="js/profile.js">
+  </script>
+ </body>
+</html>

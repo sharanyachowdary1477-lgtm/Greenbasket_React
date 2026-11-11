@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Admin Dashboard — GreenBasket</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="site-header"></div>
+    <main class="section">
+        <div class="container">
+            <div class="admin-head">
+                <div><span class="eyebrow-note">Management console</span><h1>GreenBasket Admin</h1><p>Separate management workspace for catalogue, recipes, orders, customers and sales.</p></div>
+                <div class="admin-actions"><a class="btn btn-ghost" href="index.html">Customer site</a><button class="btn btn-ghost" id="admin-logout">Log out</button></div>
+            </div>
+            <div class="stats-grid">
+                <div><span>Products</span><b id="stat-products">0</b></div>
+                <div><span>Recipes</span><b id="stat-recipes">0</b></div>
+                <div><span>Customers</span><b id="stat-users">0</b></div>
+                <div><span>Orders</span><b id="stat-orders">0</b></div>
+                <div><span>Total sales</span><b id="stat-sales">₹0</b></div>
+                <div><span>UPI sales</span><b id="stat-upi">₹0</b></div>
+                <div><span>Card sales</span><b id="stat-card">₹0</b></div>
+                <div><span>Cash sales</span><b id="stat-cash">₹0</b></div>
+            </div>
+
+            <div class="admin-grid">
+                <section class="profile-card">
+                    <h2>Add / update shop item</h2>
+                    <p>Add a product individually. It appears in the customer shop immediately after refresh.</p>
+                    <form id="product-form" class="form-grid">
+                        <label>Name<input id="product-name" required placeholder="e.g. Gongura Leaves"></label>
+                        <label>Category<select id="product-cat"><option value="produce">Fresh Produce</option><option value="dairy">Dairy & Eggs</option><option value="staples">Rice & Staples</option><option value="bakery">Bakery</option><option value="meat">Meat & Seafood</option><option value="spices">Spices & Masala</option></select></label>
+                        <label>Price (₹)<input id="product-price" type="number" min="1" required></label>
+                        <label>Quantity / Unit<input id="product-unit" required placeholder="500 g"></label>
+                        <label class="wide">Image URL<input id="product-image" required placeholder="https://..."></label>
+                        <label class="wide">Tag (optional)<input id="product-tag" placeholder="Fresh today"></label>
+                        <button class="btn btn-primary" type="submit">Add item to shop</button>
+                    </form>
+                </section>
+
+                <section class="profile-card">
+                    <h2>Add recipe</h2>
+                    <p>Create an individual Indian recipe and select existing shop ingredients by product ID.</p>
+                    <form id="recipe-form" class="form-grid">
+                        <label>Name<input id="recipe-name" required placeholder="e.g. Gongura Pachadi"></label>
+                        <label>Region<input id="recipe-region" required placeholder="Andhra Pradesh"></label>
+                        <label>Time<input id="recipe-time" required placeholder="30 min"></label>
+                        <label>Serves<input id="recipe-serves" type="number" min="1" value="4" required></label>
+                        <label class="wide">Icon / emoji<input id="recipe-icon" value="🍲"></label>
+                        <label class="wide">Ingredient IDs & quantities<input id="recipe-items" required placeholder="tomato:2,onion:1,chilli:1"></label>
+                        <label class="wide">Method — separate steps with |<textarea id="recipe-steps" required placeholder="Prepare ingredients | Cook until ready | Serve hot"></textarea></label>
+                        <button class="btn btn-primary" type="submit">Add recipe</button>
+                    </form>
+                </section>
+            </div>
+
+            <div class="admin-grid">
+                <section class="profile-card">
+                    <h2>Fresh-item notification</h2>
+                    <label>Title<input id="n-title" value="Fresh item available"></label>
+                    <label>Message<textarea id="n-message">Fresh groceries are available today.</textarea></label>
+                    <button class="btn btn-primary" id="save-notify">Publish notification</button>
+                </section>
+                <section class="profile-card">
+                    <h2>Catalogue added by admin</h2>
+                    <div id="admin-products"></div>
+                </section>
+            </div>
+
+            <section class="profile-card">
+                <h2>Recipe catalogue</h2>
+                <div id="admin-recipes"></div>
+            </section>
+            <section class="profile-card">
+                <h2>Sales & orders</h2>
+                <div class="sales-summary" id="sales-summary"></div>
+                <div id="admin-orders"></div>
+            </section>
+        </div>
+    </main>
+    <script src="js/data.js"></script>
+    <script src="js/chrome.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
